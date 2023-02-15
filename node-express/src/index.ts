@@ -1,5 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config({ path: `.env.${process.env.NODE_ENV || 'development'}.local` });
 import express from "express";
-import { getRequiredEnvVar, setDefaultEnvVar } from "./envHelpers";
 import {
   addAlchemyContextToRequest,
   validateAlchemySignature,
@@ -9,13 +10,9 @@ import {
 async function main(): Promise<void> {
   const app = express();
 
-  setDefaultEnvVar("PORT", "8080");
-  setDefaultEnvVar("HOST", "127.0.0.1");
-  setDefaultEnvVar("SIGNING_KEY", "whsec_test");
-
-  const port = +getRequiredEnvVar("PORT");
-  const host = getRequiredEnvVar("HOST");
-  const signingKey = getRequiredEnvVar("SIGNING_KEY");
+  const port = Number(process.env.PORT) || 8080;
+	const host = process.env.HOST || '127.0.0.1';
+	const signingKey = process.env.SIGNING_KEY || '';
 
   // Middleware needed to validate the alchemy signature
   app.use(
@@ -34,7 +31,7 @@ async function main(): Promise<void> {
       return res.status(400).send("Only ADDRESS_ACTIVITY event type supported");
 
     const { Mailchain } = await import("@mailchain/sdk");
-    const secretRecoveryPhrase = 'your secret recovery phrase from Mailcahin'; // for simplicity putting this inline, better way is to keep this in environment variable. Take a look on other examples how to do this.
+    const secretRecoveryPhrase = process.env.SECRET_RECOVERY_PHRASE!
     const mailchain = Mailchain.fromSecretRecoveryPhrase(secretRecoveryPhrase);
 
     for (const activity of webhookEvent.event.activity) {

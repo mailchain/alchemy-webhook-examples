@@ -1,6 +1,8 @@
-# Example Alchemy Notify Webhooks Server in Node
+# Example Alchemy Notify Webhooks Server in Node + Mailchain SDK
 
-A simple example webhook server for using Alchemy Notify that uses node express.
+A example of webhook server for using Alchemy Notify that uses node express and Mailchain SDK to send mail for Address Activity events.
+
+For the full example and tutorial how to setup this webhook and Mailchain SDK, head over to [Mailchain Developer Docs](https://docs.mailchain.com/developer/tutorials/send-mail-on-address-activity).
 
 ## Installation
 

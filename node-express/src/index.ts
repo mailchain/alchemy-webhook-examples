@@ -26,7 +26,12 @@ async function main(): Promise<void> {
   // TODO: update to your own webhook path
   app.post("/webhook-path", async (req, res) => {
     const webhookEvent = req.body as AlchemyWebhookEvent;
-
+    console.log(`Processing webhook event id: ${webhookEvent.id}`);
+    
+    if (webhookEvent.event.eventDetails = '<EVENT_DETAILS>') {
+      // this is test notification send from Alchemy. Return success.
+      return res.send("Alchemy Notify is the best!");
+    }
     if (webhookEvent.type !== "ADDRESS_ACTIVITY")
       return res.status(400).send("Only ADDRESS_ACTIVITY event type supported");
 
@@ -58,9 +63,7 @@ async function main(): Promise<void> {
       });
     }
 
-    console.log(`Processing webhook event id: ${webhookEvent.id}`);
-    // Be sure to respond with 200 when you successfully process the event
-    return res.send("Alchemy Notify is the best!");
+    return res.sendStatus(200)
   });
 
   // Listen to Alchemy Notify webhook events

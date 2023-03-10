@@ -208,27 +208,29 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mailchain/addressing@0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/addressing/-/addressing-0.15.1.tgz#a70e7888a7142aedfe431073b77feff58a0e25b2"
-  integrity sha512-S5NJdVX00yRmAqbnj6hKg/R7W10BklimSDeigjisfHNz9V2tJeurM4Emlijf619IYmdpJFib6n25kKT97OlSBg==
+"@mailchain/addressing@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/addressing/-/addressing-0.17.0.tgz#e89f1cb401548f4a16bb66ce6fa437eb167f4ca7"
+  integrity sha512-EoOAlw8/sW87JXOUUjvWkFmhE9hKuEo33jGg/mwkhuZXkzqRgXMId4WAHqO6mxTvN9NxTHclDjj0PVqpIICw6g==
   dependencies:
     "@ethersproject/transactions" "^5.7.0"
-    "@mailchain/crypto" "0.15.1"
-    "@mailchain/encoding" "0.15.1"
+    "@mailchain/crypto" "0.17.0"
+    "@mailchain/encoding" "0.17.0"
 
-"@mailchain/api@0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/api/-/api-0.15.1.tgz#933edd425e28f3d3bc155ac75624d15fa1975d68"
-  integrity sha512-gDTySHC5RRmeGlc7HyKjFinBJZrsyL22YHkztHIvbbAc+N3xlMlnORCt/JQuan2cOV9/DnsC4FnwN+eXZ95YGg==
+"@mailchain/api@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/api/-/api-0.17.0.tgz#c5afc72af1b54addc3212f5d01c91c82669a001d"
+  integrity sha512-xcp+FKaP91U/KY0pnpRsZYMNzZ1yQj/sIq6Fu11eEn7S38FP5+PPC/M3AHiAt11JSYGRvKQuu7eiDHx6rNO3ng==
   dependencies:
-    "@mailchain/crypto" "0.15.1"
-    "@mailchain/encoding" "0.15.1"
+    "@mailchain/crypto" "0.17.0"
+    "@mailchain/encoding" "0.17.0"
+    axios "1.3.4"
+    lodash "^4.17.21"
 
-"@mailchain/crypto@0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/crypto/-/crypto-0.15.1.tgz#15af7d8add8f68e0c12d9e4ba73f95f2b6027495"
-  integrity sha512-tpj/Yy+4mNDluFNE8tIa2PXa7opSf2nLJY66E9PCgQP0SAqz0IHH+mzoC4OcKY8Rwksnt7RpsE9h4GuS5NDqWg==
+"@mailchain/crypto@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/crypto/-/crypto-0.17.0.tgz#365ebce0a097eeba8bf3125097f431d23514b2ec"
+  integrity sha512-JMvyJ9dHN64bY/WsC9aMU4PvwCYD8AlFLJeG7aNxspUn5pQUh33lqicX1RO0ntvnzpXw7tkj97H3o9QxwMwCAw==
   dependencies:
     "@ethersproject/hash" "5.7.0"
     "@ethersproject/signing-key" "5.6.2"
@@ -240,58 +242,61 @@
     secp256k1 "^4.0.2"
     tweetnacl "^1.0.3"
 
-"@mailchain/encoding@0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/encoding/-/encoding-0.15.1.tgz#8a1a37b3d9a95933d7af83f2c2bfa23a78c95bb9"
-  integrity sha512-OWhrgJtRQhSpuDnZmbuxwv5SysOp3TMAaseX1hS0gcQcgbV5DPCySyoiVG30KXfZyTN+s+0iG+NphPD54cQT7w==
+"@mailchain/encoding@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/encoding/-/encoding-0.17.0.tgz#e12d833b06f88168ec702a04e873eb5116c893be"
+  integrity sha512-NHYrGkf6U0RHgKRMJoqtIXDLCL3P17t8tPsIqiJn+JcLad41AwOVfN8NnvrESc1oGlng3a9n12SY8ZFlvFb6kA==
   dependencies:
     "@polkadot/util-crypto" "10.1.11"
 
-"@mailchain/keyring@0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/keyring/-/keyring-0.15.1.tgz#4c2bf6999c4c71ebd38719bca0ce0b4ed70e198b"
-  integrity sha512-Q0lDqQtJPXlA8y9wdVnaEUX50ZtT3JNS2I+s9/PhbSyIrMmMdkp48WzH+sp4bVXol4yybr0Xp3LC4+eJ/GfibQ==
+"@mailchain/keyring@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/keyring/-/keyring-0.17.0.tgz#ade3283ac015653fb546c32ad08e7b689854632c"
+  integrity sha512-9b0gAzFt0Lac+eWf+fFmQW/Qh7zIlSR9o0IH5OwDG+6wTTAs5CKVbGTlA5pEfLpg2imQ7uuwONMiB42uITpWtw==
   dependencies:
-    "@mailchain/addressing" "0.15.1"
-    "@mailchain/crypto" "0.15.1"
-    "@mailchain/encoding" "0.15.1"
+    "@mailchain/addressing" "0.17.0"
+    "@mailchain/crypto" "0.17.0"
+    "@mailchain/encoding" "0.17.0"
 
-"@mailchain/message-composer@0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/message-composer/-/message-composer-0.15.1.tgz#965f6d1cec3208122dbeed258995138fda84ba48"
-  integrity sha512-OMhl0OkDl5hNtA2eA7B2kL6uCOojY1J24bS/H03LwRPOEK6IiG36fAzQgOFxiMNj0MrXYE6jL3NA8MfVJbgjiA==
+"@mailchain/message-composer@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/message-composer/-/message-composer-0.17.0.tgz#47355af363bddea31d7504c6f9a41c7cc45961f7"
+  integrity sha512-fas7MSoEPgBJrv+57Rz3q6HNoMDEmxGyP/ze933Zd5tvtQ0T6ppK1aPIFKvZy1A5bhsbZXEQBzGDE37dmmkMvg==
   dependencies:
-    "@mailchain/encoding" "0.15.1"
+    "@mailchain/encoding" "0.17.0"
     date-fns "^2.29.2"
 
-"@mailchain/sdk@^0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/sdk/-/sdk-0.15.1.tgz#56d38fa4e43a3a4e2f59fadee3d36496fa2726d0"
-  integrity sha512-/OTaoxNJthmFcYTx8k7vs0o0XLCpPPcHa3ijoVCLd8YF3ZTiwOLSbO6bXuuYp8xn4Xo/AB9+4NfJdHZYHdqwIw==
+"@mailchain/sdk@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/sdk/-/sdk-0.17.0.tgz#ced37578709530fc9fb7c0f3939ef3f86bac05a3"
+  integrity sha512-mHxxFIMsLgzu0350eGHSPl1MjkTpXM0v4TSVUi0SaRjlHI8uggDboYmHta3Be7i7TIaZQOEzoCe4zCAiIVEhQQ==
   dependencies:
-    "@mailchain/addressing" "0.15.1"
-    "@mailchain/api" "0.15.1"
-    "@mailchain/crypto" "0.15.1"
-    "@mailchain/encoding" "0.15.1"
-    "@mailchain/keyring" "0.15.1"
-    "@mailchain/message-composer" "0.15.1"
-    "@mailchain/signatures" "0.15.1"
+    "@mailchain/addressing" "0.17.0"
+    "@mailchain/api" "0.17.0"
+    "@mailchain/crypto" "0.17.0"
+    "@mailchain/encoding" "0.17.0"
+    "@mailchain/keyring" "0.17.0"
+    "@mailchain/message-composer" "0.17.0"
+    "@mailchain/signatures" "0.17.0"
     "@noble/hashes" "^1.0.0"
+    axios "1.3.4"
     canonicalize "^1.0.8"
     email-addresses "5.0.0"
     emailjs-mime-parser "^2.0.7"
     lodash "^4.17.21"
     protobufjs "7.1.1"
 
-"@mailchain/signatures@0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@mailchain/signatures/-/signatures-0.15.1.tgz#f7393e0c0cb90810ecce39c840807b278ade9ac6"
-  integrity sha512-roMapvsxDfyWp234uoRSP3BZcURcbP8/0tZFoX9R46lcr7pn9KYdGIGhKbnQT2YmCtXfjaZ/DhAltMa0waqy9A==
+"@mailchain/signatures@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mailchain/signatures/-/signatures-0.17.0.tgz#40c0448d289e761107f5883238628cf3379c6579"
+  integrity sha512-XuUKb6GkJ8muwShPRih+azXz0FesPKJULgFTIGHHivo3gtrWVh4IDKO7OaKvW3cb7/l/tsNEqC8sZ/ipCA8LWg==
   dependencies:
     "@ethersproject/hash" "5.7.0"
-    "@mailchain/crypto" "0.15.1"
-    "@mailchain/encoding" "0.15.1"
+    "@mailchain/addressing" "0.17.0"
+    "@mailchain/crypto" "0.17.0"
+    "@mailchain/encoding" "0.17.0"
     canonicalize "^1.0.8"
+    lodash "^4.17.21"
     secp256k1 "^4.0.2"
 
 "@noble/hashes@1.1.3":
@@ -623,6 +628,20 @@ array-flatten@1.1.1:
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
   integrity sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==
 
+asynckit@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
+  integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
+
+axios@1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.4.tgz#f5760cefd9cfb51fd2481acf88c05f67c4523024"
+  integrity sha512-toYm+Bsyl6VC5wSkfkbbNB6ROv7KY93PEBBL6xyDczaIHasAiv4wPqQ/c4RjoQzipxRD2W5g21cOqQulZ7rHwQ==
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 bn.js@^4.11.9:
   version "4.12.0"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
@@ -674,6 +693,13 @@ canonicalize@^1.0.8:
   resolved "https://registry.yarnpkg.com/canonicalize/-/canonicalize-1.0.8.tgz#24d1f1a00ed202faafd9bf8e63352cd4450c6df1"
   integrity sha512-0CNTVCLZggSh7bc5VkX5WWPWO+cyZbNd07IHIsSXLia/eAq+r836hgk+8BKoEh7949Mda87VUOitx5OddVj64A==
 
+combined-stream@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
+  integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
+  dependencies:
+    delayed-stream "~1.0.0"
+
 content-disposition@0.5.4:
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/content-disposition/-/content-disposition-0.5.4.tgz#8b82b4efac82512a02bb0b1dcec9d2c5e8eb5bfe"
@@ -712,6 +738,11 @@ debug@2.6.9:
   integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
   dependencies:
     ms "2.0.0"
+
+delayed-stream@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
+  integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
 
 depd@2.0.0:
   version "2.0.0"
@@ -856,6 +887,20 @@ finalhandler@1.2.0:
     statuses "2.0.1"
     unpipe "~1.0.0"
 
+follow-redirects@^1.15.0:
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
+  integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
+
 forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
@@ -977,7 +1022,7 @@ mime-db@1.52.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
   integrity sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
 
-mime-types@~2.1.24, mime-types@~2.1.34:
+mime-types@^2.1.12, mime-types@~2.1.24, mime-types@~2.1.34:
   version "2.1.35"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
   integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
@@ -1071,6 +1116,11 @@ proxy-addr@~2.0.7:
   dependencies:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
+
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
 qs@6.10.3:
   version "6.10.3"

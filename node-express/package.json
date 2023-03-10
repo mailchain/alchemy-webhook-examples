@@ -12,7 +12,7 @@
     "typescript": "^4.7.2"
   },
   "dependencies": {
-    "@mailchain/sdk": "^0.15.1",
+    "@mailchain/sdk": "^0.17.0",
     "dotenv": "^16.0.3",
     "express": "^4.17.3",
     "ts-node": "^10.8.0",

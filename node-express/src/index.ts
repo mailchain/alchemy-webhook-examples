@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config({ path: `.env.${process.env.NODE_ENV || 'development'}.local` });
 import express from "express";
+import { setEnvironmentData } from 'worker_threads';
 import {
   addAlchemyContextToRequest,
   validateAlchemySignature,
@@ -52,7 +53,7 @@ async function main(): Promise<void> {
         html: `There has been a transfer of <b>${value}${asset}</b> from <b>${fromAddress}</b> into <b>${toAddress}<b>. Check the transaction details on <a href="https://goerli.etherscan.io/tx/${hash}">Etherscan</a>.`,
       };
 
-      await mailchain.sendMail({
+      const {data: sentMail, error} = await mailchain.sendMail({
         from: (await mailchain.user()).address,
         to: [
           `${fromAddress}@ethereum.mailchain.com`,
@@ -61,6 +62,11 @@ async function main(): Promise<void> {
         subject: mailSubject,
         content: mailContent,
       });
+      if (error) {
+        console.warn(`Failed sending mail for transaction ${hash}`)
+      } else {
+        console.log(`Successfully send mail for transaction ${hash} with message id ${sentMail.savedMessageId}`)
+      }
     }
 
     return res.sendStatus(200)
